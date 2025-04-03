@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,9 +41,15 @@ const Navbar = () => {
           </div>
           
           <div className="hidden md:block">
-            <Button className="bg-gradient-to-r from-expo-cyan to-expo-purple text-white hover:from-expo-purple hover:to-expo-cyan transition-all duration-300 shadow-lg hover:shadow-expo-cyan/20">
-              Register Now
-            </Button>
+            <Link to="/register">
+              <Button className="bg-gradient-to-r from-expo-cyan to-expo-purple text-white hover:from-expo-purple hover:to-expo-cyan transition-all duration-300 shadow-lg hover:shadow-expo-cyan/20 relative overflow-hidden group">
+                <span className="relative z-10 flex items-center">
+                  Register Now
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </span>
+                <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+              </Button>
+            </Link>
           </div>
           
           <div className="md:hidden">
@@ -88,12 +95,18 @@ const Navbar = () => {
             >
               Contact
             </a>
-            <Button 
-              className="bg-gradient-to-r from-expo-cyan to-expo-purple text-white hover:from-expo-purple hover:to-expo-cyan transition-all duration-300 shadow-lg hover:shadow-expo-cyan/20 w-full"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Register Now
-            </Button>
+            <Link to="/register">
+              <Button 
+                className="bg-gradient-to-r from-expo-cyan to-expo-purple text-white hover:from-expo-purple hover:to-expo-cyan transition-all duration-300 shadow-lg hover:shadow-expo-cyan/20 w-full relative overflow-hidden group"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <span className="relative z-10 flex items-center justify-center">
+                  Register Now
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </span>
+                <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+              </Button>
+            </Link>
           </div>
         </div>
       )}
