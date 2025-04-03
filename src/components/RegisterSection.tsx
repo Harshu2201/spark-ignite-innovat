@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 // Mock QR code image URL
 const qrCodeUrl = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiB2aWV3Qm94PSIwIDAgMjU2IDI1NiI+PHJlY3Qgd2lkdGg9IjI1NiIgaGVpZ2h0PSIyNTYiIGZpbGw9IiMwMGYwZmYiIGZpbGwtb3BhY2l0eT0iMC4xIi8+PHJlY3QgeD0iMzIiIHk9IjMyIiB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBmMGZmIiBzdHJva2Utd2lkdGg9IjQiLz48cmVjdCB4PSI2NCIgeT0iNjQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzAwZjBmZiIvPjxyZWN0IHg9IjE1MiIgeT0iNjQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzAwZjBmZiIvPjxyZWN0IHg9IjY0IiB5PSIxNTIiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzAwZjBmZiIvPjxyZWN0IHg9IjEyMCIgeT0iOTYiIHdpZHRoPSIxNiIgaGVpZ2h0PSI2NCIgZmlsbD0iIzAwZjBmZiIvPjxyZWN0IHg9IjE1MiIgeT0iMTI4IiB3aWR0aD0iNDAiIGhlaWdodD0iMTYiIGZpbGw9IiMwMGYwZmYiLz48cmVjdCB4PSIxNTIiIHk9IjE2MCIgd2lkdGg9IjE2IiBoZWlnaHQ9IjMyIiBmaWxsPSIjMDBmMGZmIi8+PHJlY3QgeD0iMTc2IiB5PSIxNzYiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iIzAwZjBmZiIvPjwvc3ZnPg==";
@@ -41,10 +42,12 @@ const RegisterSection = () => {
               </ul>
             </div>
             
-            <Button className="bg-gradient-to-r from-expo-cyan to-expo-purple text-white hover:shadow-lg hover:shadow-expo-cyan/50 px-8 py-6 text-lg relative overflow-hidden group">
-              <span className="relative z-10">Register Your Team</span>
-              <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
-            </Button>
+            <Link to="/register">
+              <Button className="bg-gradient-to-r from-expo-cyan to-expo-purple text-white hover:shadow-lg hover:shadow-expo-cyan/50 px-8 py-6 text-lg relative overflow-hidden group">
+                <span className="relative z-10">Register Your Team</span>
+                <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
+              </Button>
+            </Link>
           </div>
           
           <div className="w-full lg:w-1/2 flex justify-center">
